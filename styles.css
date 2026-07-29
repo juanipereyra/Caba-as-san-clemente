@@ -310,15 +310,27 @@ section {
   object-fit: cover;
 }
 
+/* Epígrafe de las fotos: se apoya sobre un degradado que se desvanece
+   hacia arriba, así se lee sin tapar la imagen ni siquiera en celular. */
 .slide-caption {
   position: absolute;
-  left: 18px;
-  bottom: 18px;
-  background: rgba(255, 255, 255, 0.88);
-  padding: 12px 14px;
-  border-radius: 16px;
-  max-width: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 34px 18px 16px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.42) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: #fff;
   font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+  /* No intercepta el gesto de deslizar ni los clics de las flechas */
+  pointer-events: none;
 }
 
 .carousel-controls {
@@ -655,10 +667,6 @@ textarea:focus {
   .nav-links {
     gap: 12px;
   }
-
-  .slide-caption {
-    max-width: calc(100% - 36px);
-  }
 }
 
 @media (max-width: 720px) {
@@ -677,6 +685,12 @@ textarea:focus {
 
   .hero-copy p {
     font-size: 0.98rem;
+  }
+
+  /* En celular la foto mide poco: epígrafe más chico y degradado más corto */
+  .slide-caption {
+    padding: 26px 12px 12px;
+    font-size: 0.86rem;
   }
 
   .section-head {
