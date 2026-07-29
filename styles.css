@@ -446,8 +446,9 @@ section {
   padding: 0 20px;
 }
 
+/* La altura la calcula script.js con scrollHeight, así ninguna
+   respuesta larga queda cortada por un tope fijo. */
 .faq-item.active .faq-answer {
-  max-height: 220px;
   padding: 0 20px 18px;
 }
 
@@ -527,6 +528,22 @@ textarea:focus {
   margin-bottom: 6px;
 }
 
+/* Estados del cuadro de disponibilidad (los aplica script.js) */
+.availability-box.is-ok {
+  background: #e4efe0;
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+.availability-box.is-warn {
+  background: #f7ecd9;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.availability-box.is-error {
+  background: #f6e0d8;
+  box-shadow: inset 3px 0 0 #b4593c;
+}
+
 .calendar-list {
   display: grid;
   gap: 10px;
@@ -539,6 +556,29 @@ textarea:focus {
   background: #fff;
   border: 1px solid var(--line);
   font-size: 0.95rem;
+  display: grid;
+  gap: 3px;
+}
+
+.blocked-item strong {
+  font-weight: 700;
+}
+
+.blocked-item span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* Rango que está ocupado en este momento */
+.blocked-item.is-ongoing {
+  border-color: #e0c9a6;
+  background: #fdf6ea;
+}
+
+.blocked-item.is-muted {
+  color: var(--muted);
+  background: transparent;
+  border-style: dashed;
 }
 
 .map-frame {

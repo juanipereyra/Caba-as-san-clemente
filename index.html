@@ -15,6 +15,7 @@
   />
   <meta property="og:image" content="img/cabana/caba2.jpg" />
   <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f6f1e8" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -137,31 +138,31 @@
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e4.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e4.jpg" alt="Entorno 4" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e5.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e5.jpg" alt="Entorno 5" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e6.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e6.jpg" alt="Entorno 6" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e7.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e7.jpg" alt="Entorno 7" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e8.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e8.jpg" alt="Entorno 8" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e9.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e9.jpg" alt="Entorno 9" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
               <div class="slide">
-                <img src="img/entorno/e10.jpg" alt="Entorno 3" loading="lazy" />
+                <img src="img/entorno/e10.jpg" alt="Entorno 10" loading="lazy" />
                 <div class="slide-caption">Un entorno natural que acompaña toda la estadía.</div>
               </div>
             </div>
@@ -200,23 +201,23 @@
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
               <div class="slide">
-                <img src="img/casita/casi4.jpg" alt="Casita 3" loading="lazy" />
+                <img src="img/casita/casi4.jpg" alt="Casita 4" loading="lazy" />
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
               <div class="slide">
-                <img src="img/casita/casi5.jpg" alt="Casita 3" loading="lazy" />
+                <img src="img/casita/casi5.jpg" alt="Casita 5" loading="lazy" />
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
               <div class="slide">
-                <img src="img/casita/casi6.jpg" alt="Casita 3" loading="lazy" />
+                <img src="img/casita/casi6.jpg" alt="Casita 6" loading="lazy" />
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
               <div class="slide">
-                <img src="img/casita/casi7.jpg" alt="Casita 3" loading="lazy" />
+                <img src="img/casita/casi7.jpg" alt="Casita 7" loading="lazy" />
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
               <div class="slide">
-                <img src="img/casita/casi8.jpg" alt="Casita 3" loading="lazy" />
+                <img src="img/casita/casi8.jpg" alt="Casita 8" loading="lazy" />
                 <div class="slide-caption">Detalles cálidos para sentirse cómodo desde el primer día.</div>
               </div>
             </div>
@@ -410,7 +411,7 @@
       <article class="reserve-card">
         <h3>Consultar disponibilidad</h3>
         <p>
-          Elegí la unidad y tus fechas. Esta primera versión funciona con fechas bloqueadas cargadas manualmente.
+          Elegí la unidad y tus fechas. La disponibilidad se toma en vivo del calendario del complejo.
         </p>
 
         <form id="bookingForm" class="form-grid">
@@ -435,14 +436,9 @@
 
           <div class="field">
             <label for="guests">Cantidad de personas</label>
+            <!-- Las opciones las genera script.js segun la capacidad de la unidad elegida -->
             <select id="guests" required>
               <option value="">Seleccionar</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
             </select>
           </div>
           <div class="field">
@@ -496,6 +492,7 @@
 
       <aside class="reserve-card">
         <h3>Fechas ocupadas / bloqueadas</h3>
+        <div class="mini-note">Se listan únicamente las fechas de hoy en adelante.</div>
         <div class="calendar-list" id="blockedDatesList"></div>
       </aside>
     </div>
@@ -560,6 +557,6 @@
     ✆
   </a>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
